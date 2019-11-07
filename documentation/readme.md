@@ -1,7 +1,11 @@
 
 Steps to create enviroment development
 
-1.- sam init --runtime python3.6 --dependency-manager pip --name Alexa-City-Guide
+1.- Create Environment
+
+    > sam init --runtime python3.6 --dependency-manager pip --name Alexa-City-Guide
+
+2.- Install dependencies
 
     > Select environment created by the manager packages you want
     > CD city/
@@ -9,6 +13,11 @@ Steps to create enviroment development
 
 
 2.- Update template.yaml
+    
+    > set CodeUri: city_guide/
+    > set Handler: app.lambda_handler
+    > set Runtime: python3.7
+    > set Role: arn:aws:iam::XXXXXX
 
 3.- how to get SkillId alexa?
     
@@ -25,3 +34,5 @@ Steps to create enviroment development
         > Go to https://console.aws.amazon.com/lambda
         
         > Copy ARN
+        
+6.- Test the skill:  Alexa open city guide
