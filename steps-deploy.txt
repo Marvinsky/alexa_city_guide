@@ -1,0 +1,17 @@
+## Para construir
+sam build
+
+## empaquetar
+## Para construir
+sam package --output-template packaged.yaml --s3-bucket lab-alexa-city-guide-deployment
+
+## Para Deployment
+sam deploy --template-file packaged.yaml --region us-east-1 --capabilities CAPABILITY_IAM --stack-name alexa-city-guide-deployment
+
+
+## Obtener Logs
+sam logs -n CityGuideFunction --stack-name alexa-city-guide-deployment --debug
+
+
+## tail logs
+sam logs -n CityGuideFunction --stack-name alexa-city-guide-deployment --tail
